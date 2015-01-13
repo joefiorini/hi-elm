@@ -5,7 +5,7 @@ DAEMONTOOLS = brew install daemontools
 .PHONY: deps_osx
 
 deps: test_prepare
-	$(SASS_COMPILER)
-	$(ENTR)
-	$(DAEMONTOOLS)
+	$$(SASS_COMPILER)
+	$$(ENTR)
+	$$(DAEMONTOOLS)
 

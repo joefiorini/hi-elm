@@ -2,7 +2,7 @@
   "name": "$packageName",
   "version": "0.0.0",
   "authors": [
-    "$authorName"
+    "$author <$email>"
   ],
   "license": "MIT",
   "private": true,

@@ -3,8 +3,8 @@
 ELM_SERVER = elm-reactor
 
 watch:
-	ELM_SERVER="$(ELM_SERVER)" supervise .
+	ELM_SERVER="$$(ELM_SERVER)" supervise .
 
 serve:
-	$(ELM_SERVER)
+	$$(ELM_SERVER)
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-if [ "$#" -ne 2 ]; then
-    echo "Usage: $0 <generated-js-file> <output-file>"
+if [ "$$#" -ne 2 ]; then
+    echo "Usage: $$0 <generated-js-file> <output-file>"
     exit 1
 fi
 
@@ -65,7 +65,7 @@ read -d '' handler <<- EOF
 jsdom.env('<p>bleh</p>', [], callback);
 EOF
 
-touch $2
-echo "$before" > $2
-cat $1 >> $2
-echo "$handler" >> $2
+touch $$2
+echo "$$before" > $$2
+cat $$1 >> $$2
+echo "$$handler" >> $$2
