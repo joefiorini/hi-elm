@@ -1,0 +1,17 @@
+{
+    "version": "1.0.0",
+    "summary": "$packageName",
+    "repository": "http://github.com/joefiorini/elm-time-machine.git",
+    "license": "BSD3",
+    "source-directories": [
+        "src"
+    ],
+    "exposed-modules": [
+      "Main",
+      "Doubler"
+    ],
+    "dependencies": {
+        "elm-lang/core": "1.1.0 <= v < 2.0.0",
+        "evancz/elm-html": "1.0.0 <= v < 2.0.0"
+    }
+}

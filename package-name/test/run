@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+ls {./*.elm,Test/*.elm,../src/*.elm,../src/**/*.elm} | entr -cdr make test

@@ -1,0 +1,41 @@
+# Directory variables
+# --------------------------
+SRC = src
+DIST = build
+STYLES = $(SRC)/styles
+IMAGES = $(SRC)/images
+
+# Source files
+# --------------------------
+ELM_SOURCES = $(SRC)/Main.elm $(wildcard $(SRC)/*.elm) $(wildcard $(SRC)/**/*.elm)
+HTML_SOURCES = $(SRC)/index.html
+SCSS_SOURCES = $(wildcard $(SRC)/styles/*.scss) $(wildcard $(SRC)/styles/**/*.scss)
+
+# Output files
+# --------------------------
+ELM_OUTPUT = $(DIST)/Main.js
+CSS_OUTPUT = $(DIST)/main.css
+HTML_OUTPUT = $(DIST)/index.html
+IMAGES_OUTPUT = $(DIST)/images
+DIST_OUTPUT = $(ELM_OUTPUT) $(CSS_OUTPUT) # $(HTML_OUTPUT)
+
+include deps.mk
+include utils.mk
+include test/test.mk
+
+.PHONY: dist
+
+$(HTML_OUTPUT): $(HTML_SOURCES)
+	cp $< $@
+
+$(IMAGES_OUTPUT): $(IMAGES)
+	cp -r $< $@
+
+$(ELM_OUTPUT): $(ELM_SOURCES)
+	elm-make --output $@ $<
+
+$(CSS_OUTPUT): $(SCSS_SOURCES)
+	sass --scss -t compressed -I bower_components/normalize-scss -I bower_components/bourbon/app/assets/stylesheets src/styles/main.scss build/main.css
+
+dist: $(DIST_OUTPUT) $(SOURCES)
+

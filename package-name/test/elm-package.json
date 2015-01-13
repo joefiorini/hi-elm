@@ -1,0 +1,16 @@
+{
+    "version": "1.0.0",
+    "summary": "elm-time-machine Tests",
+    "repository": "http://github.com/joefiorini/elm-time-machine.git",
+    "license": "BSD3",
+    "source-directories": [
+        ".",
+        "../src"
+    ],
+    "exposed-modules": [],
+    "dependencies": {
+        "deadfoxygrandpa/Elm-Test": "1.0.1 <= v < 2.0.0",
+        "elm-lang/core": "1.1.0 <= v < 2.0.0",
+        "maxsnew/IO": "1.0.0 <= v < 2.0.0"
+    }
+}
