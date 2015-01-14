@@ -1,4 +1,4 @@
-SASS_COMPILER = gem install sass # Needs Ruby Sass by default for bourbon
+SASS_COMPILER = sudo gem install sass # Needs Ruby Sass by default for bourbon
 ENTR = brew install entr
 DAEMONTOOLS = brew install daemontools
 
