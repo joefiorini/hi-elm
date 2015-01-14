@@ -15,7 +15,7 @@ $$(TEST)/test.js: TEST_SOURCES $$(ELM_SOURCES)
 .PHONY: test_prepare test
 
 test_prepare:
-  cd test; elm-package install evancz/automaton; \
+	cd test; elm-package install evancz/automaton; \
     npm install jsdom
 
 test: $$(TEST)/test.js
