@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-ls {./*.elm,Test/*.elm,../src/*.elm,../src/**/*.elm} | entr -cdr make test
+cd ..
+cat <(find -f src test/Test -name "*.elm") <(echo test/Test.elm) | entr -dr make test
