@@ -17,7 +17,7 @@ ELM_OUTPUT = $$(DIST)/Main.js
 CSS_OUTPUT = $$(DIST)/main.css
 HTML_OUTPUT = $$(DIST)/index.html
 IMAGES_OUTPUT = $$(DIST)/images
-DIST_OUTPUT = $$(ELM_OUTPUT) $$(CSS_OUTPUT) # $$(HTML_OUTPUT)
+DIST_OUTPUT = $$(ELM_OUTPUT) $$(CSS_OUTPUT) $$(HTML_OUTPUT)
 
 include deps.mk
 include utils.mk

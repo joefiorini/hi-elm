@@ -1,0 +1,18 @@
+<html>
+
+  <head>
+    <title>$packageName</title>
+    <link type="text/css" rel="stylesheet" href="/main.css">
+    <script type="text/javascript" src="/Main.js"></script>
+  </head>
+
+  <body>
+
+    <script>
+      Elm.fullscreen(Elm.Main);
+    </script>
+
+  </body>
+
+
+</html>
