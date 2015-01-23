@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 (cd build && $$ELM_SERVER &)
-find src | entr -drc make dist
+find src -type f | entr -drc make dist
