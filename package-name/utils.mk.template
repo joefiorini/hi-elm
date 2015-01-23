@@ -7,4 +7,3 @@ watch:
 
 serve:
 	$$(ELM_SERVER)
-

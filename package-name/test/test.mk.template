@@ -18,7 +18,7 @@ test_prepare:
 	cd test; elm-package install evancz/automaton; \
     npm install jsdom
 
-test_watch:
+test_watch: test_prepare
 	supervise test
 
 test: $$(TEST)/test.js
